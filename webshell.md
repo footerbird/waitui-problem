@@ -1,6 +1,7 @@
 ## 一、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
 检测有没有安装gd库
+
 1、webshell下命令
 ```
 php -i|grep -i --color gd 或 php -m;
