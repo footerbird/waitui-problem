@@ -5,10 +5,11 @@ php -v
 ```
 httpd就是apache的目录
 
-## 二、在linux环境下安装apache和php
+## 二、在linux环境下安装apache和php和php扩展
 ```
 yum -y install httpd
-yum -y installl php
+yum -y install php
+yum -y install php-gd
 ```
 httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息
 
