@@ -10,7 +10,9 @@ httpd就是apache的目录
 yum -y install httpd
 yum -y installl php
 ```
-httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息，在/var/文件夹下会出现www文件夹，里面放置网站项目
+httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息
+
+在/var/文件夹下会出现www文件夹，里面放置网站项目，默认www下有html空文件夹，可以在html文件夹下放入index.html替换掉默认网页
 
 安装完成后查看apache状态
 ```
