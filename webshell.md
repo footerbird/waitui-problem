@@ -77,3 +77,7 @@ Include /etc/httpd/conf/httpd-vhosts.conf
 ```
 保存完成后，最后重启apache就可以了
 
+## 五、路由重写index.php
+1、httpd.conf配置文件中加载了mod_rewrite.so模块，AllowOverride None 将None改为 All
+2、添加.htaccess文件放到入口文件的同级目录下
+
