@@ -12,6 +12,11 @@ yum -y installl php
 ```
 httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息，在/var/文件夹下会出现www文件夹，里面放置网站项目
 
+安装完成后查看apache状态
+```
+service httpd status
+```
+
 ## 三、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
 检测有没有安装gd库
