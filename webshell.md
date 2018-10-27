@@ -1,4 +1,10 @@
-## 一、服务器环境生成图片报错Call to undefined function imagecreate()
+## 一、查看linux下的php环境
+```
+httpd -v
+```
+httpd就是apache的目录
+
+## 二、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
 检测有没有安装gd库
 
@@ -27,3 +33,4 @@ yum -y install php-gd
 ```
 service httpd restart
 ```
+
