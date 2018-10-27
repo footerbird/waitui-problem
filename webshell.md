@@ -1,10 +1,18 @@
 ## 一、查看linux下的php环境
 ```
 httpd -v
+php -v
 ```
 httpd就是apache的目录
 
-## 二、服务器环境生成图片报错Call to undefined function imagecreate()
+## 二、在linux环境下安装apache和php
+```
+yum -y install httpd
+yum -y installl php
+```
+httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息，在/var/文件夹下会出现www文件夹，里面放置网站项目
+
+## 三、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
 检测有没有安装gd库
 
