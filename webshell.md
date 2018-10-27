@@ -48,4 +48,26 @@ yum -y install php-gd
 ```
 service httpd restart
 ```
+## 四、配置虚拟站点
+
+在/www/文件夹下分别建三个站点的文件目录doc1,doc2,doc3，然后在/etc/httpd/conf/下添加httpd-vhosts.conf文件，文件内容为
+```
+<VirtualHost *:80>
+    DocumentRoot "/var/www/doc1"
+    ServerName www.doc1.com
+</VirtualHost>
+<VirtualHost *:80>
+    DocumentRoot "/var/www/doc2"
+    ServerName www.doc2.com
+</VirtualHost>
+<VirtualHost *:80>
+    DocumentRoot "/var/www/doc3"
+    ServerName www.doc3.com
+</VirtualHost>
+```
+然后找到/etc/httpd/conf/httpd.conf文件，在最底部加入
+```
+Include /etc/httpd/conf/httpd-vhosts.conf
+```
+保存完成后，最后重启apache就可以了
 
