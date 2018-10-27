@@ -10,6 +10,7 @@ httpd就是apache的目录
 yum -y install httpd
 yum -y install php
 yum -y install php-gd
+yum -y install php-mysql
 ```
 httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息
 
@@ -19,6 +20,10 @@ httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apach
 ```
 service httpd status
 ```
+
+这里php-gd是安装图形库，不然php无法创建图片
+
+php-mysql用来连接mysql数据库
 
 ## 三、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
