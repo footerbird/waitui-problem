@@ -25,12 +25,12 @@ var p = new Promise(function (resolve, reject) {
 });
 
 p.then(multiply)
-    .then(add)
-    .then(multiply)
-    .then(add)
-    .then(function (result) {
-        console.log('Got value: ' + result);
-    });
+ .then(add)
+ .then(multiply)
+ .then(add)
+ .then(function (result) {
+     console.log('Got value: ' + result);
+ });
 
 console.log('hello world');
 ```
