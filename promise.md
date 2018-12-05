@@ -1,5 +1,7 @@
 # Promise示例
 
+Promise有各种开源实现，在ES6中被统一规范，由浏览器直接支持
+
 ```
 // 0.5秒后返回input*input的计算结果:
 function multiply(input) {
