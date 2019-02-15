@@ -19,7 +19,7 @@ grant all privileges on *.* to 'root'@'%' identified by 'password' with grant op
 
 这是由于在安装mysqli模块时，使用的API library版本与API header版本不一致所致。
 
-#解决办法
+### 解决办法
 ```
 yum remove php-mysql
 yum remove php-mysql
