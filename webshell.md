@@ -82,3 +82,22 @@ Include /etc/httpd/conf/httpd-vhosts.conf
 
 2、添加.htaccess文件放到入口文件的同级目录下
 
+## 六、在linux环境下安装mcrypt扩展
+
+首先判断有没有按照mcrypt
+```
+yum list installed|grep mcrypt
+```
+如果没有的话
+
+```
+yum install libmcrypt libmcrypt-devel mcrypt mhash
+```
+再按照php-mcrypt
+
+```
+yum install php-mcrypt
+```
+最后重启一下apache
+
+
