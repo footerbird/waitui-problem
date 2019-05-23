@@ -15,7 +15,7 @@ grant all privileges on *.* to 'root'@'%' identified by 'password' with grant op
 如果还不能连上，需要添加安全组
 参考：[使用Navicat连接阿里云服务器中的Mysql数据库](https://blog.csdn.net/kaifaxiaoliu/article/details/80403736)
 
-##php报错Headers and client library minor version mismatch
+## php报错Headers and client library minor version mismatch
 
 这是由于在安装mysqli模块时，使用的API library版本与API header版本不一致所致。
 
