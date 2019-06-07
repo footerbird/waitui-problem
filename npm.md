@@ -18,8 +18,8 @@ package.json 这个文件是 npm init 时创建的一个文件，会记录当前
 
 3、5.4.2版本后[why is package-lock being ignored? · Issue #17979 · npm/npm](https://github.com/npm/npm/issues/17979)
 
-&nbsp;&nbsp;&nbsp;&nbsp;大致意思是，如果改了package.json，且package.json和lock文件不同，那么执行`npm i`时npm会根据package中的版本号以及语义含义去下载最新的包，并更新至lock。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大致意思是，如果改了package.json，且package.json和lock文件不同，那么执行`npm i`时npm会根据package中的版本号以及语义含义去下载最新的包，并更新至lock。
 
-&nbsp;&nbsp;&nbsp;&nbsp;如果两者是同一状态，那么执行`npm i `都会根据lock下载，不会理会package实际包的版本是否有新。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果两者是同一状态，那么执行`npm i `都会根据lock下载，不会理会package实际包的版本是否有新。
 
 
