@@ -22,7 +22,7 @@ grant all privileges on *.* to 'root'@'%' identified by 'password' with grant op
 解决办法
 ```
 yum remove php-mysql
-yum remove php-mysql
+yum install php-mysql
 ```
 重启apache
 ```
