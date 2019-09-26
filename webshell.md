@@ -100,4 +100,7 @@ yum install php-mcrypt
 ```
 最后重启一下apache
 
+## 七、 linux，centos下php版本升级
+
+参考链接：[https://blog.csdn.net/wuhounuanyangzhao/article/details/79709077](https://blog.csdn.net/wuhounuanyangzhao/article/details/79709077)
 
