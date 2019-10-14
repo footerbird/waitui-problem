@@ -25,6 +25,13 @@ service httpd status
 
 php-mysql用来连接mysql数据库（注意，服务器上的database.php只能连数据库的内网IP）
 
+（解决报错:Call to undefined function mb_detect_encoding()）
+
+```
+yum -y install php-mbstring
+yum -y install php-xml
+```
+
 ## 三、服务器环境生成图片报错Call to undefined function imagecreate()
 原因：这是服务器下没有安装gd库所导致的。
 检测有没有安装gd库
