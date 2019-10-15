@@ -19,7 +19,7 @@ yum -y install mod_ssl
 ```
 SSLCertificateFile /etc/pki/tls/certs/2_waitui.com.crt
 SSLCertificateKeyFile /etc/pki/tls/private/3_waitui.com.key
-SSLCertificateChainFile /etc/pki/tls/certs/1_root_bundle.crt
+SSLCACertificateFile /etc/pki/tls/certs/1_root_bundle.crt
 ```
 把ssl.conf中的服务器名称指向域名监听443端口，这样就可以https访问了
 
