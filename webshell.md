@@ -112,3 +112,9 @@ yum install php-mcrypt
 
 参考链接：[https://blog.csdn.net/wuhounuanyangzhao/article/details/79709077](https://blog.csdn.net/wuhounuanyangzhao/article/details/79709077)
 
+## Linux 上传下载文件
+
+```
+scp /home/vie/app-phone2.png root@112.17.38.145:/opt/htdocs/yumi.com/htdocs/yumi/m/images/topic
+```
+
