@@ -117,4 +117,7 @@ yum install php-mcrypt
 ```
 scp /home/vie/app-phone2.png root@112.17.38.145:/opt/htdocs/yumi.com/htdocs/yumi/m/images/topic
 ```
-
+ssh登录远程服务器
+```
+ssh vie@112.17.38.136 -p 10022
+```
