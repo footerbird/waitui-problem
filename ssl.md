@@ -13,7 +13,7 @@ yum -y install mod_ssl
 /etc/pki/tls/private/3_waitui.com.key
 ```
 
-## 三、配置ssl.conf文件
+## 三、配置ssl.conf文件(/etc/httpd/conf.d/ssl.conf)
 
 找到 SSLCertificateFile /etc/pki/tls/ 关键词，并将配置内容替换成我们申请的证书
 ```
