@@ -2,7 +2,7 @@
 
 `npm install --save` 局部安装，并会把模块自动写如入package.json中的dependencies（生产环境）里。
 
-`npm install --dev`局部安装，并会把模块自动写入package.json中的devDependencies（开发环境，安装的是开发时需要的包。。。）里。
+`npm install --save-dev`局部安装，并会把模块自动写入package.json中的devDependencies（开发环境，安装的是开发时需要的包。。。）里。
 
 npm 5 开始 通过`npm install`不加--save 和`npm install --save`一样 都是局部安装并会把模块自动写入package.json中的dependencies里。
 
