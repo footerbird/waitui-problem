@@ -28,3 +28,13 @@ yum install php-mysql
 ```
 systemctl restart httpd 或 service httpd restart
 ```
+
+## 实用mysql语句
+in,group by,having筛选多类同名商标
+```
+SELECT mark_name,COUNT(mark_name) FROM mark_info WHERE mark_category  IN (3,10,35) GROUP BY mark_name HAVING COUNT(mark_name) > 2;
+```
+regexp 同一字段like多个值
+```
+select * from domain_info where is_onsale = 'sale' and domain_name regexp 'lc.com.cn|kj.com.cn|qc.com.cn'
+```
