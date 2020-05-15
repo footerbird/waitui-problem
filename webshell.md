@@ -125,3 +125,8 @@ ssh登录远程服务器
 ```
 ssh vie@112.17.38.136 -p 10022
 ```
+
+## 在MAC安装brew
+```
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
