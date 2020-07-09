@@ -140,3 +140,4 @@ du -h -d 1
 ```
 git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk '{print$1}')"
 ```
+地址 https://www.dazhuanlan.com/2020/02/02/5e36f1a8991da/
