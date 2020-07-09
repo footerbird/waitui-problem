@@ -135,3 +135,8 @@ ssh vie@112.17.38.136 -p 10022
 du -h -d 1
 ```
 查看当前目录下面所有文件夹所占的空间
+
+## git寻找历史中的大文件
+```
+git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk '{print$1}')"
+```
