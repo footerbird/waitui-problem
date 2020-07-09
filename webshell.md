@@ -130,3 +130,8 @@ ssh vie@112.17.38.136 -p 10022
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
+## linux如何查看文件夹占用磁盘空间
+```
+du -h -d 1
+```
+查看当前目录下面所有文件夹所占的空间
