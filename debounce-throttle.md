@@ -15,7 +15,7 @@ throttle(一般限流)：假如在短时间内同一事件多次触发，那么�
 ```
 const throttle = function(fn,delay){
   let prev = Date.now()
-  return  ()=> {
+  return ()=> {
     let now = Date.now()
     if (now - prev >= delay) {
         fn()
