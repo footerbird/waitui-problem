@@ -10,6 +10,9 @@ vim flash.sh
 #! /bin/bash
 # 每隔2小时获取一次36kr快讯
 curl https://admin.waitui.com/admin/Article_controller/batch_spider_flash_do
+echo -e "\n快讯爬取成功..."
+currTime=$(date +"%Y-%m-%d %T")
+echo $currTime
 ```
 
 2. 给脚本文件赋予权限
@@ -56,9 +59,15 @@ crontab -e
 ```
 */1 * * * * /usr/local/qcloud/stargate/admin/start.sh > /dev/null 2>&1 &
 0 0 * * * /usr/local/qcloud/YunJing/YDCrontab.sh > /dev/null 2>&1 &
-0 */2 * * * /var/www/html/flash.sh > /dev/null 2>&1 &
+0 */2 * * * /var/www/html/flash.sh >> /var/www/html/flash.log 2>&1 &
 ```
 
-可以看到里面多加了一个flash定时任务,然后保存就可以了
+这里>> /var/www/html/flash.log表示将执行结果输出到flash.log文件中，>>表示如果文件已存在则向文件追加新添加的内容， 2>&1表示将错误结果也输出到log文件
+
+可以看到里面多加了一个flash定时任务,然后保存重启就可以了
+
+```
+service crond restart
+```
 
 参考资料 [https://www.runoob.com/linux/linux-comm-crontab.html](https://www.runoob.com/linux/linux-comm-crontab.html)
