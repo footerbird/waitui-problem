@@ -31,3 +31,11 @@ git checkout -b hotfix_7.2.0 bossure/hotfix_7.2.0
 git checkout master
 git merge hotfix_7.2.0
 ```
+
+## 四、refusing to merge unrelated histories的解决方案
+
+在合并merge时加上--allow-unrelated-histories
+
+```
+git merge hotfix_7.2.0 --allow-unrelated-histories
+```
