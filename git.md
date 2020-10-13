@@ -13,6 +13,17 @@ git checkout -b develop origin/develop
 
 ## 三、将不同仓库的远程分支进行合并
 
+关联远程仓库
+```
+git remote add bossure https://git.kaifazhe.me/laobanfx/shop/shop-b2b2c-web.git
+```
+
+不关联远程仓库
+```
+git remote remove bossure
+```
+
+流程如下
 ```
 git remote add bossure https://git.kaifazhe.me/laobanfx/shop/shop-b2b2c-web.git
 git pull bossure
