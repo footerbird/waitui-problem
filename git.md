@@ -18,7 +18,7 @@ git checkout -b develop origin/develop
 git remote add bossure https://git.kaifazhe.me/laobanfx/shop/shop-b2b2c-web.git
 ```
 
-不关联远程仓库
+删除远程仓库关联
 ```
 git remote remove bossure
 ```
