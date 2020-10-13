@@ -10,3 +10,13 @@ update.zip就是导出文件的压缩包
 ```
 git checkout -b develop origin/develop
 ```
+
+## 三、将不同仓库的远程分支进行合并
+
+```
+git remote add bossure https://git.kaifazhe.me/laobanfx/shop/shop-b2b2c-web.git
+git pull bossure
+git checkout -b hotfix_7.2.0 bossure/hotfix_7.2.0
+git checkout master
+git merge hotfix_7.2.0
+```
