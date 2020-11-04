@@ -38,3 +38,45 @@ sudo nginx
 ```
 
 解决
+
+## nginx配置（conf/nginx.conf）
+
+nginx监听3000端口
+
+```
+server {
+		listen       80;
+		server_name  你的域名;
+
+		#后台服务配置，配置了这个location便可以通过http://域名/jeecg-boot/xxxx 访问		
+		location ^~ /jeecg-boot {
+			proxy_pass              http://127.0.0.1:8080/jeecg-boot/;
+			proxy_set_header        Host 127.0.0.1;
+			proxy_set_header        X-Real-IP $remote_addr;
+			proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+		}
+		#解决Router(mode: 'history')模式下，刷新路由地址不能找到页面的问题
+		location / {
+			root   html;
+			index  index.html index.htm;
+			if (!-e $request_filename) {
+				rewrite ^(.*)$ /index.html?s=$1 last;
+				break;
+			}
+		}
+	}
+```
+
+## nginx 开启压缩，提高首页访问效率
+
+nginx.conf 的 http 中加入以下片断
+
+```
+# gzip config
+    gzip on;
+    gzip_min_length 1k;
+    gzip_comp_level 9;
+    gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+    gzip_vary on;
+    gzip_disable "MSIE [1-6]\.";
+```
