@@ -128,3 +128,6 @@ yarn start
 yarn packager
 ```
 在dist目录下将会生成一个electron-rxgmy-darwin-x64文件夹（这是mac系统生成应用程序的文件夹，windows系统文件夹名称不一样），生成的可执行文件就在该目录下
+
+参考资料
+[https://blog.csdn.net/fukaiit/article/details/90964319](https://blog.csdn.net/fukaiit/article/details/90964319)
