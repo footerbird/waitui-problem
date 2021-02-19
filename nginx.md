@@ -23,6 +23,47 @@ nginx使用域名代理vue项目的时候会出现接口数据请求不到的问
 chmod -R 777 nginx/proxy_temp/
 ```
 
+## 解决：NET::ERR_INCOMPLETE_CHUNKED_ENCODING 200 (OK)
+
+常见的原因有如下几种情况：
+
+### 1、nginx的缓冲区（Proxy Buffer）设置较小
+
+修改配置如下：
+
+```
+proxy_buffer_size 1024k;
+proxy_buffers 16 1024k;
+proxy_busy_buffers_size 2048k;
+proxy_temp_file_write_size 2048k;
+```
+
+### 2、nginx的临时目录（/proxy_temp）过大或没有权限写入缓存文件
+
+当代理文件大小超过配置的proxy_temp_file_write_size值时，nginx会将文件写入到临时目录下（默认为/proxy_temp）。
+
+如果nginx中/proxy_temp过大或者没有写权限，缓存文件就写不进去了。
+
+·直接删除Nginx缓存文件；
+
+```
+rm -rf  /usr/local/nginx/proxy_temp
+```
+
+·设置Nginx的缓存过期时间；
+
+·调整/proxy_temp权限为配置nginx的那个用户；
+
+```
+chown -R www:www /usr/local/nginx/proxy_temp
+```
+
+### 3、磁盘空间不够
+
+删掉磁盘一些日志 文件，释放下空间。
+
+参考：[https://blog.csdn.net/willingtolove/article/details/103372199](https://blog.csdn.net/willingtolove/article/details/103372199)
+
 ## mac上启动nginx遇到80端口被占用的解决方法
 
 今天启动nginx的时候，发现80端口被占用，用ps -ef | grep nginx和lsof -i:80都找不到，后来上网搜索后发现是apache的问题，是因为系统自带的apache启动了所以占用了ngxin80端口，解决方案是执行下面的代码。
@@ -80,3 +121,11 @@ nginx.conf 的 http 中加入以下片断
     gzip_vary on;
     gzip_disable "MSIE [1-6]\.";
 ```
+
+## linux查看当前目录下，各文件夹大小
+
+```
+du -lh --max-depth=1
+```
+
+
