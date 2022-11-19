@@ -39,3 +39,9 @@ git merge hotfix_7.2.0
 ```
 git merge hotfix_7.2.0 --allow-unrelated-histories
 ```
+
+## 五： 解决git pull时每次都要输入用户名密码的问题
+
+```
+https://footerbird:footerbirdxxxx@gitee.com/footerbird/ransheng-ad-landing.git
+```
