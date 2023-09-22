@@ -43,12 +43,14 @@ systemctl stop mysqld.service
 mysql -u username -p
 ```
 接下来要你输入密码，初始密码存在/var/log/mysqld.log文件里
+```
+vim /var/log/mysqld.log
+```
 
-3、首选修改密码验证强度等级为LOW
+3、首选修改密码验证强度等级为LOW，否则会出现报错set global validate_password_policy=LOW;
 ```
 set global validate_password_policy=LOW;
 ```
-否则会出现报错set global validate_password_policy=LOW;
 
 4、修改mysql密码
 ```
