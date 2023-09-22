@@ -1,6 +1,27 @@
 ## CentOS7安装MySQL（完整版）
 
-参考：[CentOS7安装MySQL（完整版）](https://blog.csdn.net/qq_36582604/article/details/80526287)
+步骤一：首先下载mysql的yum源配置
+```
+wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+```
+步骤二：安装mysql的yum源
+```
+yum -y install mysql57-community-release-el7-11.noarch.rpm
+```
+步骤三：yum方式安装mysq
+```
+yum -y install mysql-server  --nogpgcheck
+--nogpgcheck  (不校验数字签名)
+```
+步骤四：使用mysql
+1.启动mysql
+```
+systemctl start mysqld.service
+systemctl status mysql.service
+```
+后续参考下面
+
+参考：[CentOS7安装MySQL（完整版）](https://blog.csdn.net/m0_46608037/article/details/123019925)
 
 注意：
 如果想使用navicat从外部能够访问的话，需要进行授权，把上面链接中的授权方法
