@@ -24,6 +24,7 @@ vim /etc/profile
 source /etc/profile
 ```
 当然也可以用配置软链接的形式（相当于window的快捷方式），但是这样会有一个麻烦，就是npm每次全局安装一个工具，都得建一次软链接
+```
 ln -s /nodejs/node-v12.20.0-linux-x64/bin/node /usr/local/bin/node
 ln -s /nodejs/node-v12.20.0-linux-x64/bin/npm /usr/local/bin/npm
 ln -s /nodejs/node-v12.20.0-linux-x64/bin/yarn /usr/local/bin/yarn
