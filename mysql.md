@@ -49,18 +49,36 @@ vim /var/log/mysqld.log
 
 3、首选修改密码验证强度等级为LOW，否则会出现报错set global validate_password_policy=LOW;
 ```
-set global validate_password_policy=LOW;
+mysql> set global validate_password_policy=LOW;
 ```
 
 4、修改mysql密码
 ```
-ALTER USER USER() IDENTIFIED BY '123456abc';
+mysql> ALTER USER USER() IDENTIFIED BY '123456abc';
 ```
 
 5、退出mysql
 ```
-quit
+mysql> quit
 ```
+
+6、navicat连接数据库（仅仅完成上面的步骤是连不上数据库的，因为mysql默认不支持远程连接）
+```
+mysql> use mysql; // 指定使用root用户自带的mysql库
+```
+查看当前MySQL允许登陆的IP
+```
+mysql> select host from user where user='root'; // 查询到的应该是localhost
+```
+修改 “mysql” 数据库里的 user 表里的 host 项，从localhost 改为 % 
+```
+mysql> update user set host = '%' where user = 'root';
+```
+flush privileges命令刷新，才会生效！
+```
+mysql> flush privileges;
+```
+至此可以从外部连接数据库了！
 
 参考：[CentOS7安装MySQL（完整版）](https://blog.csdn.net/m0_46608037/article/details/123019925)
 
