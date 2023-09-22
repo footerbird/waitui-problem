@@ -13,14 +13,41 @@ yum -y install mysql57-community-release-el7-11.noarch.rpm
 yum -y install mysql-server  --nogpgcheck
 --nogpgcheck  (不校验数字签名)
 ```
-步骤四：使用mysql
-1.启动mysql
+步骤四：启动mysql
+1.使用systemctl命令启动mysql服务
 ```
 systemctl start mysqld.service
+```
+查看mysql服务状态
+```
 systemctl status mysqld.service
 ```
-后续参考下面
-
+停止mysql服务
+```
+systemctl stop mysqld.service
+```
+重启mysql服务
+```
+systemctl stop mysqld.service
+```
+2、命令行进入mysql
+```
+mysql -u username -p
+```
+接下来要你输入密码，初始密码存在/var/log/mysqld.log文件里
+3、修改mysql密码
+首选修改密码验证强度等级为LOW
+```
+set global validate_password_policy=LOW;
+```
+否则会出现报错set global validate_password_policy=LOW;
+```
+ALTER USER USER() IDENTIFIED BY '123456abc';
+```
+退出mysql
+```
+quit
+```
 参考：[CentOS7安装MySQL（完整版）](https://blog.csdn.net/m0_46608037/article/details/123019925)
 
 注意：
