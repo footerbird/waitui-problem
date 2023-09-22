@@ -17,7 +17,7 @@ yum -y install mysql-server  --nogpgcheck
 1.启动mysql
 ```
 systemctl start mysqld.service
-systemctl status mysql.service
+systemctl status mysqld.service
 ```
 后续参考下面
 
