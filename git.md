@@ -45,3 +45,7 @@ git merge hotfix_7.2.0 --allow-unrelated-histories
 ```
 https://footerbird:footerbirdxxxx@gitee.com/footerbird/ransheng-ad-landing.git
 ```
+## 六、linux安装git
+```
+yum install git
+```
