@@ -1,4 +1,4 @@
-## NVM作为nodejs版本控制器的应用
+## NVM作为nodejs版本控制器的应用,vue3需要已安装 18.3 或更高版本的 Node.js
 下载安装使用NVM
 ```
 # 下载nvm源代码
