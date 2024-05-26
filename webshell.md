@@ -10,7 +10,9 @@ httpd就是apache的目录
 yum -y install httpd
 yum -y install php
 yum -y install php-gd
+yum -y install php-zip
 yum -y install php-mysql
+yum -y install php-bcmath
 ```
 httpd安装完成以后在/etc/文件夹下会出现httpd目录，里面是apache的配置信息
 
